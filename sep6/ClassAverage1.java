@@ -14,8 +14,15 @@ public class ClassAverage1;{
     int mygrade= input.nextint();
     //loop
     while (mygrade != -1){
-      
-    }
+      total = total +mygrade;
+      gradeCounter= gradeCounter+1 //not for the loop, for the division
+
+      System.out.print ("Enter grade or -1 to quit");
+      mygrade= input.nextint(); // read the input
+    }//close while
+
+    if (gradeCounter !=0)
+    { double average = (double) total/gradeCounter}
   }
 
 }
