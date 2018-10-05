@@ -1,0 +1,88 @@
+//create Sales.java 
+
+//import Scanner 
+import java.util.Scanner;
+
+//create public class 
+public class Sales {
+	
+	//main method
+	public static void main (String [] args) {
+		
+		//create Scanner
+		Scanner input = new Scanner (System.in);
+		
+		//initialize variables
+		int muffinNumber;
+		
+		//muffin quantity 
+		double muffin1 = 0; 
+		double muffin2 = 0;
+		double muffin3 = 0;
+		
+		//muffin prices 
+		double muffin1value = 2.98;
+		double muffin2value = 4.50;
+		double muffin3value = 9.98;
+		
+		//prompt
+		System.out.println("Enter muffin number ");
+		
+		//read integer 
+		muffinNumber = input.nextInt();
+		
+		//sentinel-controlled loop 
+		while (muffinNumber != 0) {
+			
+			if (muffinNumber >= 1 && muffinNumber <=3) //if muffin number is between 1 and 3
+			
+			switch(muffinNumber)
+			
+			{
+				case 1: {
+					System.out.print( "Enter quantity ");
+					muffin1 += input.nextDouble();
+					break;
+				}
+				
+				case 2: {
+					System.out.print("Enter quantity ");
+				muffin2 += input.nextDouble();
+				break; 
+				
+				}
+				
+				case 3: {
+					System.out.print("Enter Quantity ");
+				muffin3 += input.nextDouble();
+					break;
+				}
+			}
+			
+		
+			
+			//muffinNumber = input.nextInt();
+			if (muffinNumber < 0 || muffinNumber > 3) {
+				
+			muffinNumber = input.nextInt(); 	
+			System.out.println("Invalid number, please enter 0,1,2 or 3"); 
+			}
+			else  {
+			
+			System.out.println ("Enter muffin number "); 
+			
+			muffinNumber = input.nextInt(); 
+			}
+			
+		}
+			
+			
+			//print retail value
+			
+			System.out.println();
+			System.out.printf("The Total retail value of all muffins sold is %.2f%n",
+			(muffin1*muffin1value) + (muffin2*muffin2value) + (muffin3*muffin3value));
+			
+	}//end main
+	
+} //end class 
