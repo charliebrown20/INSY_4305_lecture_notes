@@ -1,0 +1,35 @@
+import java.util.Scanner; //program uses Scanner
+
+public class Duplicate {
+	public static void main (String [] args) {
+		
+		//declare array with 5 elements
+		int Array1[] = new int[6];
+		//initialize counter 
+		int counter = 0;
+		//initialize boolean 
+		boolean duplicate = false;
+		
+		//create Scanner 
+		Scanner input = new Scanner(System.in);
+		
+		//while loop 
+		while(counter < Array1.length){  //when counter is less than index
+			System.out.print("Enter integer between 20 and 200: ");  //print
+			int number = input.nextInt();  //prompt 
+						
+			if (number >= 20 && number <= 200)  //if statement between 20 and 200
+			{
+				++counter;  //increment 
+				Array1[counter] = number;
+				System.out.printf("%d%n", Array1[counter]);
+			}
+			
+			//boolean number=false 
+			//if (int i=0 
+		else{
+			System.out.println("Error. Please enter a number between 20 and 200");
+			}
+		}
+	}//end main
+}//end class 
