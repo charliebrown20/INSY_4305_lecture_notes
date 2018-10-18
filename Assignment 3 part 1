@@ -1,0 +1,104 @@
+//import Scanner 
+import java.util.Scanner;
+
+public class MyTest{
+  public static void main(String[] args) {
+
+    Scanner input = new Scanner(System.in);
+
+	//initialize boolean to true 
+    boolean play = true;
+	
+	//begin while 
+    while(play == true){
+
+	//initialize count of wrong and answered 
+    int totalWrong = 0;
+    int totalAnswered = 1;
+
+	//setup print statements  
+    System.out.println("The quiz or game has three questions about Java");
+    System.out.println("Each question has four possible answers (1-4)");
+    System.out.println("Please enter 0 to exit");
+
+	//to show correct or incorrect question 1 
+    System.out.println("Question 1? ");
+    int answer = input.nextInt(); //prompt for input 
+    if(answer != 0){
+      if (answer == 2){
+        System.out.println("correct");
+      }
+      else{
+        System.out.println("the correct answer is 2");
+        totalWrong = totalWrong + 1;  //increment wrong counter 
+      }
+    }
+	//to show correct or incorrect question 2  
+    while(answer != 0){
+      switch(totalAnswered){
+        case 1:
+          System.out.println("Question two? ");
+          answer= input.nextInt(); //prompt for input 
+          if(answer != 0){
+            if (answer == 3){
+              System.out.println("correct");
+            }
+            else{
+              System.out.println("the correct answer is 3"); 
+              totalWrong = totalWrong + 1; //increment wrong counter 
+            }
+            break;}
+
+          else{
+            break;
+          }
+
+        case 2:
+          System.out.println("Question three? "); //show correct or incorrect question 3 
+          answer= input.nextInt();
+          if(answer != 0){
+            if (answer == 4){
+              System.out.println("correct");
+            }
+            else{
+              System.out.println("the correct answer is 4");
+              totalWrong = totalWrong + 1; //increment wrong counter
+            }
+            break;}
+          else{
+            break;
+          }
+
+
+        default:  //break from game if 0 
+          answer = 0;
+          break;
+      }
+
+      totalAnswered = totalAnswered + 1;
+    }//end while
+
+	//if answer is 0 print next line 
+    if(answer == 0){
+      System.out.println("Thank you for playing.");
+      play = false;  //boolean is false, second choice 
+	  
+    }//end if
+	
+	//if statement for new game 
+    if(totalAnswered >1){
+      System.out.println("Would you like to play again?");
+      System.out.println("true for yes");
+      System.out.println("false for no");
+      play = input.nextBoolean();
+      if(play == false){//when false no new game 
+        System.out.println("goodbye");
+      }
+    }
+
+
+  }//end while
+  
+  }//end main
+  
+}//end class
