@@ -1,0 +1,38 @@
+//multiplicationTest.java
+ //import Scanner 
+ 
+import java.util.Scanner;
+
+public class multiplicationTest {
+	
+ public static void main( String args[] ) {
+  
+	//create Scanner 
+    Scanner input = new Scanner (System.in);
+    
+	//while loop 
+	while (true)
+    {
+      multiplication multiple  = new multiplication();
+      String question = multiple.createQuestion();
+      boolean ansOK = false;
+      do
+      {
+        System.out.println(question);
+        int guess = input.nextInt();
+        ansOK = multiple.CheckResponse(guess);
+        if (ansOK) 
+		{
+          System.out.println("very good");
+		}
+        else
+		{
+          System.out.println("no, please try again");
+		}
+		
+      
+	  }
+	  while (! ansOK);
+    }
+  }
+}
