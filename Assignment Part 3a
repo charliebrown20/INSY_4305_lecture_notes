@@ -1,0 +1,31 @@
+//create Multiplication.java 
+//import SecureRandom 
+//import Scanner 
+
+import java.security.SecureRandom;
+//import java.util.Scanner;
+
+public class Multiplication {
+	
+	//create SecureRandom
+  private final static SecureRandom random  = new SecureRandom (); 
+  private int ans; //ans is answer from user 
+
+  //create method for 1-20 integers  
+  public String createQuestion ()
+  {
+    int number1 = 1 + random.nextInt(20);
+    int number2 = 1 + random.nextInt(20);
+
+    ans  = number1 * number2;
+    return String.format("What is %d times %d", number1, number2);
+  }
+  
+  //create method for checking guess 
+  public boolean CheckResponse (int guess)
+  {
+    return guess == ans ;
+  }
+}
+
+  
